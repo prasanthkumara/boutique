@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row detail-container">
+        <div class="col-lg-2">
+            <img class="image-small" (click)="selectImage(productDetail.image_path)" [src]="productDetail.image_path" />
+            <img class="image-small" (click)="selectImage(productDetail.image_path)" [src]="productDetail.image_path" />
+            <img class="image-small" (click)="selectImage(productDetail.image_path)" [src]="productDetail.image_path" />
+        </div>
+        <div class="col-lg-5">
+            <img class="main-image" [src]="mainImage" />
+        </div>
+        <div class="col-lg-5">
+            <h1>{{productDetail.name}}</h1>
+            <h5>{{productDetail.description}}</h5>
+            <div class="product_price">{{productDetail.price*quantity}} /-</div>
+            <ul class="star_rating">
+                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+            </ul>
+            <div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
+                <span>Quantity:</span>
+                <div class="quantity_selector">
+                    <span class="minus" (click)="removeQuantity()"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                    <span id="quantity_value">{{quantity}}</span>
+                    <span class="plus" (click)="addQuantity()"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                </div>
+                <div class=""><button class=" btn red_button add_to_cart_button" (click)="addToCart()">add to cart</button></div>
+
+            </div>
+        </div>
+    </div>
+</div>

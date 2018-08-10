@@ -1,0 +1,41 @@
+.cart-container {
+    margin: 30px 0px;
+    height: 100vh;
+}
+
+.cart-image {
+    width: 100px;
+}
+
+.cart-item-container {
+    margin: 30px auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-description-container {
+    padding: 20px;
+}
+
+.cart-item-price {
+    color: #fe4c50;
+    font-size: 30px;
+}
+
+.cart-total-price {
+    font-size: 25px;
+    margin: 50px auto;
+}
+
+.cart-back-button {
+    margin: 20px 0px;
+}
+
+.cart-amount {
+    font-family: arial;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.success {
+    color: rgb(0, 117, 6);
+}

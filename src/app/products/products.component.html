@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="banner">
+        <div class="banner-container">
+            <div class="header">
+                Get upto 30% off on new arrivals.
+            </div>
+            <button class="shop-button">Shop Now</button>
+        </div>
+    </div>
+    <div class="container product-list">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-centered" *ngFor="let product of products">
+                <div class="product-container">
+                    <img class="product" [src]="product.image_path" layout-fill/>
+                    <a [routerLink]="['/product/'+product._id]">
+                        <p class="product-name">{{product.name}}</p>
+                    </a>
+                    <p class="product-price">{{product.price}}</p>
+                    <button class="cart-button" (click)="addToCart(product)" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
