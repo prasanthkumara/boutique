@@ -7,8 +7,8 @@ var glob = require("glob")
 var dir = './server/assets';
 
 var db_url = 'mongodb://localhost/test';
-if (process.env.MONGODB_URL) {
-    db_url = process.env.MONGODB_URL;
+if (process.env.MONGODB_URI) {
+    db_url = process.env.MONGODB_URI;
 }
 mongoose.connect(db_url);
 /* GET api listing. */
