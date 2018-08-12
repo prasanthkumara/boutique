@@ -11,7 +11,9 @@ export class CartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.items = JSON.parse(localStorage.getItem('cart_items'));
+    if(JSON.parse(localStorage.getItem('cart_items'))) {
+      this.items = JSON.parse(localStorage.getItem('cart_items'));
+    }
     this.calculateTotal();
   }
 
