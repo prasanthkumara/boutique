@@ -15,7 +15,12 @@ export class ProductsService {
   }
 
   getCartItems(){
-    return JSON.parse(localStorage.getItem('cart_items'));
+    if(localStorage.getItem('cart_items')) {
+      return JSON.parse(localStorage.getItem('cart_items'));
+    }
+    else {
+      return [];
+    }
   }
 
   addToCart = function(productDetail,quantity){
