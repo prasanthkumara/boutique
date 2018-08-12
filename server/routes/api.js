@@ -45,11 +45,11 @@ router.post('/product/create/move', (req, res) => {
             if (!fs.existsSync(dir + "/" + product._id)) {
                 fs.mkdirSync(dir + "/" + product._id);
             }
-            glob('./server/assets/' + product._id + '/*', {}, function(er, files) {
-                fs.rename(files[0], './server/assets/' + product._id + '/' + product.image_path, function(err) {
-                    if (err) console.log('ERROR: ' + err);
-                });
-            })
+            // glob('./server/assets/*', {}, function(er, files) {
+            fs.rename('./server/assets/' + product.image_path, './server/assets/' + product._id + '/' + product.image_path, function(err) {
+                if (err) console.log('ERROR: ' + err);
+            });
+            // })
 
         });
         res.send(products);
