@@ -66,9 +66,10 @@ header {
 .custom-badge {
     width: 20px;
     height: 20px;
+    font-weight: bolder;
     border-radius: 10px;
     position: absolute;
-    padding: 0px 7px;
+    padding: 0px 6px;
     background-color: #f31e1e;
     color: #fff;
 }
